@@ -4,8 +4,13 @@ var express = require("express");
 var server = express();
 
 server.get("/", (req, res, next) => {
-    console.log("someone else");
-    res.send("menu: what do you want? food or water?");
+    console.log("Someone else");
+    res.send("Menu: What do you want? Food or Water?");
+})
+
+server.get("/water", (req, res, next) => {
+    console.log("Someone asking for Water");
+    res.send("Here is Water :)");
 })
 
 server.listen(PORT, () => {
